@@ -35,8 +35,8 @@ The configuration details of each machine may be found below.
 | Name       | Function                  | IP Address | Operating System     |
 |------------|---------------------------|------------|----------------------|
 | Jump Box   | Gateway                   | 10.1.0.4   | Linux (ubuntu 18.04) |
-| Web1       | Traffic Monitoring        | 10.1.0.5   | Linux (ubuntu 18.04) |
-| Web2       | Traffic Monitoring        | 10.1.0.6   | Linux (ubuntu 18.04) |
+| Web 1       | Traffic Monitoring       | 10.1.0.5   | Linux (ubuntu 18.04) |
+| Web 2       | Traffic Monitoring       | 10.1.0.6   | Linux (ubuntu 18.04) |
 | ELK Server | Data Aggregation          | 10.2.0.4   | Linux (ubuntu 18.04) |
 
 ### Access Policies
