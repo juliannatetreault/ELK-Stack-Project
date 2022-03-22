@@ -76,12 +76,12 @@ The following screenshot displays the result of running `sudo docker ps` after s
 ### Target Machines and Beats
 
 This ELK server is configured to monitor the following machines:
-- Web1: 10.1.0.5
-- Web2: 10.1.0.6
+- Web 1: `10.1.0.5`
+- Web 2: `10.1.0.6`
 
 We have installed the following Beats on these machines:
-- filebeat version 7.6.2
-- metricbeat version 7.6.2
+- `filebeat` version `7.6.2`
+- `metricbeat` version `7.6.2`
 
 These Beats allow us to collect the following information from each machine:
 - filebeat allows us to collect data about the file system.
@@ -125,7 +125,7 @@ In addition to the above, you will also need to update the ansible container via
 10.2.0.4 ansible_python_interpreter=/usr/bin/python3
 ```
 
-Finally, you’ll want to update the `username` within the `/etc/ansible/ansible.cfg` to match the username given to your Web1 and Web2 servers, as shown below:
+Finally, you’ll want to update the `username` within the `/etc/ansible/ansible.cfg` to match the username given to your Web 1 and Web 2 servers, as shown below:
 
 `remote_user=sysadmin`
     
