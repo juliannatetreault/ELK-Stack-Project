@@ -19,7 +19,6 @@ This document contains the following details:
   - Machines Being Monitored
 - How to Use the Ansible Build
 
-
 ### Description of the Topology
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
@@ -31,12 +30,11 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 
 
-
 | Name       | Function                  | IP Address | Operating System     |
 |------------|---------------------------|------------|----------------------|
 | Jump Box   | Gateway                   | 10.1.0.4   | Linux (ubuntu 18.04) |
-| Web 1       | Traffic Monitoring       | 10.1.0.5   | Linux (ubuntu 18.04) |
-| Web 2       | Traffic Monitoring       | 10.1.0.6   | Linux (ubuntu 18.04) |
+| Web 1      | Traffic Monitoring        | 10.1.0.5   | Linux (ubuntu 18.04) |
+| Web 2      | Traffic Monitoring        | 10.1.0.6   | Linux (ubuntu 18.04) |
 | ELK Server | Data Aggregation          | 10.2.0.4   | Linux (ubuntu 18.04) |
 
 ### Access Policies
@@ -56,18 +54,17 @@ A summary of the access policies in place can be found in the table below.
 | Web 2      | No                  | SSH from Jump Box       |
 | ELK Server | Yes                 | SSH from Allowlisted IP |
 
-
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because this reduces deployment time per container, allows for scalable deployment, and eliminates manual configuration entry errors.
 
 The playbook implements the following tasks by installing the following modules within the container:
-- Install `docker.io`
-- Install `pip3`
-- Install `docker python module` 
-- Configure `sysctl` modules
-- Downloads and launches the docker ELK container
-- Sets the docker services to boot on docker start
+- Installs `docker.io`.
+- Installs `pip3`.
+- Installs `docker python module`.
+- Configures `sysctl` modules.
+- Downloads and launches the docker ELK container.
+- Sets the docker services to boot on docker start.
 
 The following screenshot displays the result of running `sudo docker ps` after successfully configuring the ELK instance.
 
@@ -93,7 +90,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the configuration file to the ansible container.
-- Update the configuration files (`filebeat-config.yml` and `metricbeat-config.yml`) to include the IP address of the ELK Server (`10.2.0.4:5601` and `10.2.0.4:9200`)
+- Update the configuration files (`filebeat-config.yml` and `metricbeat-config.yml`) to include the IP address of the ELK Server (`10.2.0.4:5601` and `10.2.0.4:9200`).
 - Run the playbooks (`filebeat-playbook.yml` and `metricbeat-playbook.yml`), and navigate to the ELK Server GUI via the ELK Server’s public IP address (`http://<ELK Server IP Address>:5601/app/kibana#/home`) to check that the installation worked as expected.
 
 The two necessary playbook files, `filebeat-playbook.yml` and `metricbeat-playbook.yml`, must be copied to `/etc/ansible/roles`.
